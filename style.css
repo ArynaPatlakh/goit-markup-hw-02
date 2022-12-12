@@ -1,0 +1,208 @@
+:root {
+  --title-text-color: #2e2f42;
+  --primary-text-color: #434455;
+  --secondary-text-color: #ffffff;
+  --footer-text-color: #e7e9fc;
+  --exception-footer-color: #f4f4fd;
+  --accent-color: #4d5ae5;
+  --background-color: #e5e5e5;
+}
+
+/* Незмінні частини сторінок та основні властивості */
+
+body {
+  color: var(--title-text-color);
+  background-color: var(--background-color);
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+ul {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* Logo */
+
+.logo {
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+}
+
+.logo-web {
+  color: var(--accent-color);
+}
+
+.logo-studio-header {
+  color: var(--title-text-color);
+}
+
+.logo-studio-footer {
+  color: var(--exception-footer-color);
+}
+
+/* Nav */
+
+.navigation a {
+  color: var(--title-text-color);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.navigation .link:hover,
+.navigation .link:focus {
+  color: var(--primary-text-color);
+}
+
+.navigation .link:active {
+  color: var(--accent-color);
+}
+
+.contact a {
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Footer */
+
+.footer p {
+  color: var(--footer-text-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* PRIMARY PAGE */
+
+/* Hero */
+
+.hero h1 {
+  color: var(--secondary-text-color);
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+}
+
+.hero-button {
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--secondary-text-color);
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.18;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--accent-color);
+}
+
+.hero-button:active {
+  background-color: #404bbf;
+}
+
+/* About Company */
+
+.about-list h3 {
+  color: var(--title-text-color);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.about-list p {
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* What are we doing */
+
+.benefits h2 {
+  color: var(--title-text-color);
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+}
+
+/* Our Team */
+
+.team h2 {
+  color: var(--title-text-color);
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+}
+
+.team h3 {
+  color: var(--title-text-color);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.team p {
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* PORTFOLIO */
+
+/* Menu */
+
+.filter-button {
+  cursor: pointer;
+  color: var(--accent-color);
+  background-color: var(--exception-footer-color);
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--secondary-text-color);
+  background-color: var(--accent-color);
+}
+
+/* Card */
+
+.card h2 {
+  color: var(--title-text-color);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.card p {
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* ЦВЕТА ВСЕ ПОДКЛЮЧИЛА, ШРИФТЫ ПОДКЛЧИЛА. ОСТАЛОСЬ ПОДКЛЮЧИТЬ ШРИФТЫ К ИСКЛЮЧЕНИЯМ. КНОПКИ ВРОДЕ КАК СДЕЛАЛА */
