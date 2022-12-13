@@ -3,27 +3,39 @@
   --primary-text-color: #434455;
   --secondary-text-color: #ffffff;
   --footer-text-color: #e7e9fc;
-  --exception-footer-color: #f4f4fd;
+  --exception-color: #f4f4fd;
   --accent-color: #4d5ae5;
-  --background-color: #e5e5e5;
 }
 
 /* Незмінні частини сторінок та основні властивості */
 
 body {
   color: var(--title-text-color);
-  background-color: var(--background-color);
+  background-color: var(--secondary-text-color);
   font-family: Roboto, sans-serif;
   font-weight: 400;
   letter-spacing: 0.02em;
+}
+
+.header {
+  background-color: var(--secondary-text-color);
 }
 
 ul {
   list-style: none;
 }
 
-.link {
-  text-decoration: none;
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 /* Logo */
@@ -33,9 +45,8 @@ ul {
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.03em;
+  text-decoration: none;
 }
 
 .logo-web {
@@ -47,36 +58,46 @@ ul {
 }
 
 .logo-studio-footer {
-  color: var(--exception-footer-color);
+  color: var(--exception-color);
 }
 
 /* Nav */
 
-.navigation a {
+.nav-link {
+  text-decoration: none;
   color: var(--title-text-color);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
 }
 
-.navigation .link:hover,
-.navigation .link:focus {
+.link-nav:hover,
+.link-nav:focus {
   color: var(--primary-text-color);
 }
 
-.navigation .link:active {
+.link-nav:active {
   color: var(--accent-color);
 }
 
-.contact a {
+.link-contact {
+  text-decoration: none;
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.5;
 }
 
-/* Footer */
+.link-contact:hover,
+.link-contact:focus {
+  color: var(--accent-color);
+}
 
-.footer p {
+/* Footer */
+.footer {
+  background-color: var(--title-text-color);
+}
+
+.footer-text {
   color: var(--footer-text-color);
   font-size: 16px;
   line-height: 1.5;
@@ -86,9 +107,13 @@ ul {
 
 /* Hero */
 
-.hero h1 {
+.hero {
+  background-color: var(--title-text-color);
+}
+
+.hero-title {
   color: var(--secondary-text-color);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
@@ -99,11 +124,10 @@ ul {
   background-color: var(--accent-color);
   color: var(--secondary-text-color);
   border: none;
-  font-weight: 600;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.04em;
 }
 
@@ -118,14 +142,14 @@ ul {
 
 /* About Company */
 
-.about-list h3 {
+.about-title {
   color: var(--title-text-color);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
 }
 
-.about-list p {
+.about-text {
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.5;
@@ -133,9 +157,9 @@ ul {
 
 /* What are we doing */
 
-.benefits h2 {
+.benefits-title {
   color: var(--title-text-color);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
@@ -143,23 +167,27 @@ ul {
 
 /* Our Team */
 
-.team h2 {
+.team {
+  background-color: var(--exception-color);
+}
+
+.team-title {
   color: var(--title-text-color);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
 }
 
-.team h3 {
+.team-subtitle {
   color: var(--title-text-color);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
   text-align: center;
 }
 
-.team p {
+.team-desk {
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.5;
@@ -173,13 +201,12 @@ ul {
 .filter-button {
   cursor: pointer;
   color: var(--accent-color);
-  background-color: var(--exception-footer-color);
+  background-color: var(--exception-color);
   border: none;
+  font-family: Roboto, sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
-  display: flex;
-  align-items: center;
   text-align: center;
   letter-spacing: 0.04em;
 }
@@ -192,17 +219,15 @@ ul {
 
 /* Card */
 
-.card h2 {
+.card-title {
   color: var(--title-text-color);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
 }
 
-.card p {
+.card-text {
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.5;
 }
-
-/* ЦВЕТА ВСЕ ПОДКЛЮЧИЛА, ШРИФТЫ ПОДКЛЧИЛА. ОСТАЛОСЬ ПОДКЛЮЧИТЬ ШРИФТЫ К ИСКЛЮЧЕНИЯМ. КНОПКИ ВРОДЕ КАК СДЕЛАЛА */
